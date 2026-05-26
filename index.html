@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geoscience Python &amp; ML Curriculum</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+  <h2 class="sr-only">Geoscience Python, Data Science and Machine Learning Curriculum — interactive course browser organized by academic year</h2>
+
+  <div class="header">
+    <h1>Geoscience Python &amp; ML Curriculum</h1>
+    <p>Python programming, data science, and machine learning for geoscientists — Year 1 undergraduate through postgraduate specialization</p>
+  </div>
+
+  <div class="year-tabs" role="tablist">
+    <button class="tab active" onclick="showYear('y1', this)" role="tab" aria-selected="true">Year 1</button>
+    <button class="tab" onclick="showYear('y2', this)" role="tab">Year 2</button>
+    <button class="tab" onclick="showYear('y3', this)" role="tab">Year 3</button>
+    <button class="tab" onclick="showYear('y4', this)" role="tab">Year 4 / Honours</button>
+    <button class="tab" onclick="showYear('yp', this)" role="tab">Postgraduate</button>
+  </div>
+
+  <!-- YEAR 1 -->
+  <div id="y1" class="year-section visible">
+    <div class="year-header y1">
+      <div class="year-badge">Year 1</div>
+      <div class="year-header-text">
+        <h2>Foundations of Computational Geoscience</h2>
+        <p>Introducing programming and data literacy to freshman geology and geophysics students with no prior coding experience</p>
+      </div>
+    </div>
+    <div class="courses-grid">
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 101</div>
+            <div class="course-name">Introduction to Python for Geoscientists</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">6 weeks · 3 hrs/week</span>
+              <span class="meta-pill pill-level">Introductory</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            None. Basic high school mathematics and curiosity are sufficient.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Write and run Python scripts using variables, loops, conditionals and functions</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Read and write CSV and text files containing geological data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Use NumPy for basic numerical operations on geoscience datasets</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Create simple line plots, scatter plots, and histograms of field data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Navigate the Jupyter Notebook environment effectively</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Python syntax, data types, lists, dictionaries</li>
+                <li>Control flow and writing reusable functions</li>
+                <li>File I/O with CSV, TXT formats</li>
+                <li>NumPy arrays and basic statistics</li>
+                <li>Matplotlib: plotting geoscience measurements</li>
+                <li>Jupyter Notebook workflow</li>
+                <li>Worked examples: grain size analysis, temperature logs</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Python 3.x</span>
+                <span class="sw-tag">Jupyter Notebook</span>
+                <span class="sw-tag">NumPy</span>
+                <span class="sw-tag">Matplotlib</span>
+                <span class="sw-tag">Pandas (intro)</span>
+                <span class="sw-tag">Anaconda</span>
+                <span class="sw-tag">Google Colab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 102</div>
+            <div class="course-name">Earth Data Literacy &amp; Visualization</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">6 weeks · 3 hrs/week</span>
+              <span class="meta-pill pill-level">Introductory</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 101 or basic familiarity with Python variables and loops.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Understand types of geoscience data: time series, spatial, borehole, image</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Perform exploratory data analysis (EDA) on real geological datasets</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Produce publication-quality geological plots using Matplotlib/Seaborn</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Understand coordinate systems and basic map projections</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Pandas DataFrames: loading and cleaning datasets</li>
+                <li>Descriptive statistics for geological data</li>
+                <li>Stratigraphic column plots, rose diagrams</li>
+                <li>Seaborn for statistical visualization</li>
+                <li>Introduction to geographic coordinate systems</li>
+                <li>Plotting on simple maps with GeoPandas</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Pandas</span>
+                <span class="sw-tag">Seaborn</span>
+                <span class="sw-tag">Matplotlib</span>
+                <span class="sw-tag">GeoPandas (intro)</span>
+                <span class="sw-tag">Jupyter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- YEAR 2 -->
+  <div id="y2" class="year-section">
+    <div class="year-header y2">
+      <div class="year-badge">Year 2</div>
+      <div class="year-header-text">
+        <h2>Applied Data Science for Geoscience</h2>
+        <p>Building practical data science skills applied to geological, geophysical and environmental problems</p>
+      </div>
+    </div>
+    <div class="courses-grid">
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 201</div>
+            <div class="course-name">Scientific Computing &amp; Numerical Methods in Geoscience</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">8 weeks · 3 hrs/week</span>
+              <span class="meta-pill pill-level">Intermediate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 101, GEO 102. Concurrent enrollment in calculus or having completed high school calculus recommended.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Solve systems of equations arising in geophysical modelling</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply numerical differentiation, integration and interpolation to field data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Implement finite difference methods for simple 1D heat/diffusion problems</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Handle and interpolate irregularly spaced geoscience data</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>SciPy: integration, optimization, interpolation</li>
+                <li>Linear algebra with NumPy: inversion basics</li>
+                <li>Finite differences: heat flow and diffusion</li>
+                <li>Time series analysis: filtering, FFT, spectral methods</li>
+                <li>Gridding and contouring spatial data</li>
+                <li>Error analysis and uncertainty propagation</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">NumPy</span><span class="sw-tag">SciPy</span>
+                <span class="sw-tag">Matplotlib</span><span class="sw-tag">Jupyter</span>
+                <span class="sw-tag">SymPy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 202</div>
+            <div class="course-name">Spatial Data Analysis &amp; GIS with Python</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">8 weeks · 3 hrs/week</span>
+              <span class="meta-pill pill-level">Intermediate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 102. Familiarity with map reading and coordinate systems helpful.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Work with vector and raster geospatial datasets programmatically</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Perform spatial joins, buffer analysis and overlay operations</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Process and visualize satellite and drone imagery</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Create interactive web maps of geological features</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Vector data: shapefiles, GeoJSON with GeoPandas</li>
+                <li>Raster data: digital elevation models with Rasterio</li>
+                <li>Coordinate reference systems and reprojection</li>
+                <li>Terrain analysis: slope, aspect, hillshade</li>
+                <li>Remote sensing basics: band math, NDVI</li>
+                <li>Interactive maps with Folium / Leaflet</li>
+                <li>Google Earth Engine Python API introduction</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">GeoPandas</span><span class="sw-tag">Rasterio</span>
+                <span class="sw-tag">Shapely</span><span class="sw-tag">Folium</span>
+                <span class="sw-tag">PyProj</span><span class="sw-tag">GDAL/OGR</span>
+                <span class="sw-tag">Google Earth Engine</span><span class="sw-tag">QGIS (Python console)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 203</div>
+            <div class="course-name">Statistics &amp; Geostatistics for Earth Scientists</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">8 weeks · 3 hrs/week</span>
+              <span class="meta-pill pill-level">Intermediate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 102, introductory statistics (or concurrent enrollment). GEO 201 recommended.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply classical statistical tests to geochemical and petrophysical data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Understand spatial autocorrelation and variogram analysis</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Perform kriging interpolation of reservoir or geochemical data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Conduct Monte Carlo simulations for uncertainty estimation</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Hypothesis testing, confidence intervals, ANOVA</li>
+                <li>Compositional data (Aitchison log-ratio methods)</li>
+                <li>Variogram modelling and spatial correlation</li>
+                <li>Ordinary and indicator kriging</li>
+                <li>Monte Carlo methods in resource estimation</li>
+                <li>Probability distributions relevant to geoscience</li>
+                <li>Regression and correlation analysis</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">SciPy.stats</span><span class="sw-tag">Statsmodels</span>
+                <span class="sw-tag">PyKrige</span><span class="sw-tag">GeostatsPy</span>
+                <span class="sw-tag">Pingouin</span><span class="sw-tag">Pandas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- YEAR 3 -->
+  <div id="y3" class="year-section">
+    <div class="year-header y3">
+      <div class="year-badge">Year 3</div>
+      <div class="year-header-text">
+        <h2>Machine Learning &amp; Domain-Specific Applications</h2>
+        <p>Applying ML methods to real geoscience workflows: lithology prediction, seismic interpretation, climate data, and subsurface modelling</p>
+      </div>
+    </div>
+    <div class="courses-grid">
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 301</div>
+            <div class="course-name">Machine Learning for Geoscientists</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">10 weeks · 4 hrs/week</span>
+              <span class="meta-pill pill-level">Intermediate–Advanced</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 201, GEO 203. Familiarity with linear algebra and probability. Python programming proficiency required.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply supervised ML models to lithology, facies, and mineral classification</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Use unsupervised clustering to identify geological patterns in multivariate data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Evaluate model performance rigorously using cross-validation strategies</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Interpret and communicate ML predictions with uncertainty quantification</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply dimensionality reduction to well-log and geochemical datasets</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>ML workflow: data prep, feature engineering, validation</li>
+                <li>Supervised: Random Forest, SVM, Gradient Boosting</li>
+                <li>Unsupervised: K-Means, DBSCAN, hierarchical clustering</li>
+                <li>Dimensionality reduction: PCA, t-SNE, UMAP</li>
+                <li>Well-log facies classification (SEG ML contest)</li>
+                <li>Geochemical anomaly detection</li>
+                <li>Feature importance and SHAP values for interpretability</li>
+                <li>Dealing with class imbalance in geological data</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Scikit-learn</span><span class="sw-tag">XGBoost</span>
+                <span class="sw-tag">LightGBM</span><span class="sw-tag">SHAP</span>
+                <span class="sw-tag">UMAP-learn</span><span class="sw-tag">Imbalanced-learn</span>
+                <span class="sw-tag">Welly</span><span class="sw-tag">LasIO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 302</div>
+            <div class="course-name">Seismic Data Processing &amp; Interpretation with Python</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">10 weeks · 4 hrs/week</span>
+              <span class="meta-pill pill-level">Advanced</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 201 (numerical methods), introductory geophysics course. Basic signal processing knowledge helpful.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Read, manipulate and visualize SEG-Y seismic data programmatically</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply standard seismic processing steps: filtering, NMO, stacking</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Extract seismic attributes and relate them to geological features</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply ML classification to seismic facies mapping</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>SEG-Y I/O with Segyio and ObsPy</li>
+                <li>Seismic processing: filtering, deconvolution, AGC</li>
+                <li>Seismic attributes: amplitude, phase, frequency, coherence</li>
+                <li>Horizon picking and fault detection</li>
+                <li>Velocity analysis and NMO correction</li>
+                <li>ML-based seismic facies classification</li>
+                <li>Seismic inversion basics</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Segyio</span><span class="sw-tag">ObsPy</span>
+                <span class="sw-tag">Bruges</span><span class="sw-tag">Striplog</span>
+                <span class="sw-tag">Madagascar (intro)</span><span class="sw-tag">OpendTect Python API</span>
+                <span class="sw-tag">PyVista</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 303</div>
+            <div class="course-name">Environmental &amp; Climate Data Science</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">8 weeks · 3 hrs/week</span>
+              <span class="meta-pill pill-level">Intermediate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 202 (spatial data), GEO 203 (statistics). Background in environmental geology or meteorology useful.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Work with netCDF and HDF5 climate data formats using Xarray</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Analyze multi-dimensional climate model output and reanalysis data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply trend analysis, change-point detection, and anomaly identification</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Build simple ML models for environmental prediction tasks</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Xarray for multi-dimensional array analysis</li>
+                <li>Working with ERA5, CMIP6, MODIS datasets</li>
+                <li>Time series: STL decomposition, Mann-Kendall trends</li>
+                <li>Precipitation, temperature and sea-level analysis</li>
+                <li>Flood/drought indices: SPI, SPEI</li>
+                <li>ML for climate downscaling basics</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Xarray</span><span class="sw-tag">Dask</span>
+                <span class="sw-tag">Cartopy</span><span class="sw-tag">cfgrib</span>
+                <span class="sw-tag">Climate Indices (py-pi)</span><span class="sw-tag">Intake</span>
+                <span class="sw-tag">Pangeo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- YEAR 4 -->
+  <div id="y4" class="year-section">
+    <div class="year-header y4">
+      <div class="year-badge">Year 4 / Honours</div>
+      <div class="year-header-text">
+        <h2>Deep Learning &amp; Advanced Geoscience Workflows</h2>
+        <p>Neural networks, computer vision for geological imagery, subsurface modelling, and research-level software engineering</p>
+      </div>
+    </div>
+    <div class="courses-grid">
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 401</div>
+            <div class="course-name">Deep Learning for Geoscience Applications</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">12 weeks · 5 hrs/week</span>
+              <span class="meta-pill pill-level">Advanced</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 301 (ML fundamentals). Solid Python skills. Linear algebra and calculus. GPU access recommended (Google Colab Pro or local NVIDIA GPU).
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Design, train and evaluate CNNs for geological image analysis</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply transfer learning with pre-trained models to geoscience imagery</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Implement recurrent networks and Transformers for sequence-type geoscience data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Use physics-informed neural networks for forward modelling</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply generative models for synthetic data augmentation</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Neural network fundamentals: backpropagation, optimizers</li>
+                <li>CNNs: architecture, convolutions, pooling</li>
+                <li>Transfer learning: ResNet, EfficientNet on thin sections</li>
+                <li>Object detection for geological features (YOLO, Faster RCNN)</li>
+                <li>LSTMs and Transformers for well-log prediction</li>
+                <li>Physics-Informed Neural Networks (PINNs) for PDEs</li>
+                <li>Autoencoders for seismic noise suppression</li>
+                <li>GANs for synthetic seismic/core image generation</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">PyTorch</span><span class="sw-tag">TensorFlow / Keras</span>
+                <span class="sw-tag">torchvision</span><span class="sw-tag">Hugging Face</span>
+                <span class="sw-tag">DeepXDE (PINNs)</span><span class="sw-tag">Albumentations</span>
+                <span class="sw-tag">Weights &amp; Biases</span><span class="sw-tag">CUDA / cuDNN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 402</div>
+            <div class="course-name">3D Subsurface Modelling &amp; Inversion with Python</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">10 weeks · 4 hrs/week</span>
+              <span class="meta-pill pill-level">Advanced</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 201, GEO 302. Strong numerical methods background. Knowledge of potential field or seismic theory.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Build and visualize 3D geological models from borehole and surface data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Implement geophysical forward modelling for gravity, magnetics and EM</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply regularized inversion methods to geophysical datasets</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Integrate well and seismic data for volumetric reservoir characterization</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>3D mesh generation and visualization with PyVista / GemPy</li>
+                <li>Implicit geological modelling workflows</li>
+                <li>Tikhonov regularization and model-based inversion</li>
+                <li>SimPEG for potential field inversion</li>
+                <li>DC Resistivity and IP forward modelling</li>
+                <li>PolyLith: multi-physics modelling frameworks</li>
+                <li>Petrel Plug-in Python workflows (intro)</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">PyVista</span><span class="sw-tag">GemPy</span>
+                <span class="sw-tag">SimPEG</span><span class="sw-tag">Fatiando a Terra</span>
+                <span class="sw-tag">Striplog</span><span class="sw-tag">OMF</span><span class="sw-tag">VTK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">GEO 403</div>
+            <div class="course-name">Research Software Engineering for Geoscientists</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">6 weeks · 3 hrs/week</span>
+              <span class="meta-pill pill-level">Advanced</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 301 or equivalent ML experience. Any Year 3 GEO course. General programming confidence.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Build reproducible geoscience workflows using version control and environments</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Write clean, tested, documented Python packages for geoscience tools</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Automate large-scale data processing pipelines with Dask and cloud computing</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Deploy interactive geoscience dashboards for stakeholder communication</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Git, GitHub: branching, pull requests, code review</li>
+                <li>Conda environments and package management</li>
+                <li>Unit testing with Pytest for numerical code</li>
+                <li>Documentation with Sphinx and ReadTheDocs</li>
+                <li>Parallel/distributed computing with Dask</li>
+                <li>Interactive dashboards with Panel / Plotly Dash</li>
+                <li>Cloud computing basics: AWS S3, Google Cloud</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Git / GitHub</span><span class="sw-tag">Pytest</span>
+                <span class="sw-tag">Sphinx</span><span class="sw-tag">Dask</span>
+                <span class="sw-tag">Panel</span><span class="sw-tag">Plotly Dash</span>
+                <span class="sw-tag">Docker (intro)</span><span class="sw-tag">AWS S3 / boto3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- POSTGRADUATE -->
+  <div id="yp" class="year-section">
+    <div class="year-header yp">
+      <div class="year-badge">Postgraduate</div>
+      <div class="year-header-text">
+        <h2>Specialised &amp; Research-Level Training</h2>
+        <p>Discipline-specific advanced courses for MSc and PhD students in petroleum geoscience, hydrogeology, geohazards, economic geology, and geodynamics</p>
+      </div>
+    </div>
+    <div class="courses-grid">
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">PGS 501</div>
+            <div class="course-name">ML for Reservoir Characterization &amp; Petrophysics</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">10 weeks · 5 hrs/week</span>
+              <span class="meta-pill pill-level">Postgraduate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 301 (ML fundamentals) or equivalent. Background in petrophysics or reservoir geology. Python proficiency.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Predict lithology, porosity, permeability and fluid saturation from well logs using ML</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Integrate core data, well logs and seismic for ML-driven facies modelling</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply deep learning to core image analysis for texture and fracture detection</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Quantify prediction uncertainty for reservoir property estimation</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Petrophysical log interpretation automation</li>
+                <li>Bayesian approaches to log-derived property prediction</li>
+                <li>CNN analysis of core CT and thin section images</li>
+                <li>Seismic inversion with neural networks</li>
+                <li>Data integration: well-to-seismic tie workflows</li>
+                <li>Stochastic simulation for reservoir modelling</li>
+                <li>Production data analytics and decline curve ML</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Welly</span><span class="sw-tag">LasIO</span>
+                <span class="sw-tag">PyTorch</span><span class="sw-tag">Bruges</span>
+                <span class="sw-tag">Pyro (Bayesian)</span><span class="sw-tag">Striplog</span>
+                <span class="sw-tag">Petrel Python</span><span class="sw-tag">ResInsight Python</span>
+              </div>
+            </div>
+            <div class="discipline-note"><strong>Target disciplines:</strong> Petroleum geology, reservoir engineering, petrophysics, basin analysis</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">PGS 502</div>
+            <div class="course-name">Deep Learning for Geophysical Imaging &amp; Inversion</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">12 weeks · 5 hrs/week</span>
+              <span class="meta-pill pill-level">Postgraduate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 401 (deep learning), GEO 402 (inversion). Advanced geophysics knowledge. GPU computing access.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Implement U-Net and segmentation networks for automated seismic horizon and fault detection</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply full-waveform inversion (FWI) enhanced with deep learning priors</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Develop normalizing flows and variational autoencoders for probabilistic inversion</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Design physics-constrained neural networks for seismic wave propagation</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Encoder–decoder networks for seismic image segmentation</li>
+                <li>Self-supervised and contrastive learning for unlabelled seismic</li>
+                <li>FWI with adjoint-state and neural network surrogates</li>
+                <li>Learned priors for underdetermined inverse problems</li>
+                <li>Score-based diffusion models for subsurface reconstruction</li>
+                <li>Foundation models and transfer learning in exploration geophysics</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">PyTorch</span><span class="sw-tag">Devito</span>
+                <span class="sw-tag">SimPEG</span><span class="sw-tag">JAX</span>
+                <span class="sw-tag">Hugging Face</span><span class="sw-tag">Lightning (PyTorch)</span>
+                <span class="sw-tag">NVIDIA Modulus</span>
+              </div>
+            </div>
+            <div class="discipline-note"><strong>Target disciplines:</strong> Exploration geophysics, seismology, applied geophysics, reflection seismic</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">PGS 503</div>
+            <div class="course-name">Geohazard Assessment &amp; Early Warning with ML</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">10 weeks · 4 hrs/week</span>
+              <span class="meta-pill pill-level">Postgraduate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 301, GEO 303. Background in geomorphology, structural geology or seismology. GEO 202 (spatial data) required.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Develop landslide susceptibility models using ML and multi-source remote sensing</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Build seismicity forecasting models using temporal and spatial ML methods</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Automate InSAR time series analysis for ground deformation monitoring</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Design operational early warning pipelines integrating sensor network data</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Landslide susceptibility: logistic regression to DL</li>
+                <li>InSAR processing: SNAP, MintPy, StaMPS workflows</li>
+                <li>Seismicity rate forecasting with Hawkes processes and LSTM</li>
+                <li>Flood modelling with ML: HEC-RAS + surrogate models</li>
+                <li>Volcanic unrest monitoring: multivariate time series</li>
+                <li>Real-time sensor data pipelines and alerting systems</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">MintPy</span><span class="sw-tag">SNAP (ESA)</span>
+                <span class="sw-tag">ObsPy</span><span class="sw-tag">PyShake</span>
+                <span class="sw-tag">Scikit-learn</span><span class="sw-tag">PyTorch</span>
+                <span class="sw-tag">Apache Kafka (intro)</span><span class="sw-tag">Google Earth Engine</span>
+              </div>
+            </div>
+            <div class="discipline-note"><strong>Target disciplines:</strong> Engineering geology, natural hazards, geomorphology, volcanology, seismology</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">PGS 504</div>
+            <div class="course-name">Mineral Exploration ML &amp; Geochemical Data Science</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">10 weeks · 4 hrs/week</span>
+              <span class="meta-pill pill-level">Postgraduate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 203 (geostatistics), GEO 301 (ML). Background in economic geology or geochemistry.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply dimensionality reduction and clustering to multi-element geochemical datasets</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Build prospectivity models integrating geology, geophysics, and geochemistry</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Classify alteration assemblages and ore deposit types using ML on spectral data</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Automate resource estimation workflows using simulation-based ML</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Compositional data analysis: isometric log-ratio transforms</li>
+                <li>Mineral identification from hyperspectral imagery (VNIR/SWIR)</li>
+                <li>Fuzzy logic and weight-of-evidence for prospectivity mapping</li>
+                <li>Random Forest and XGBoost on drillhole geochemistry</li>
+                <li>Sequential Gaussian simulation for grade estimation</li>
+                <li>Integrating open geoscience data (USGS, GSA) into ML pipelines</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Pyrolite</span><span class="sw-tag">GeostatsPy</span>
+                <span class="sw-tag">Spectral Python (SPy)</span><span class="sw-tag">Scikit-learn</span>
+                <span class="sw-tag">GemPy</span><span class="sw-tag">mplstereonet</span>
+                <span class="sw-tag">GSLIB Python wrappers</span>
+              </div>
+            </div>
+            <div class="discipline-note"><strong>Target disciplines:</strong> Economic geology, geochemistry, mineral exploration, petrology</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">PGS 505</div>
+            <div class="course-name">Hydrogeology Data Science &amp; Groundwater Modelling</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">10 weeks · 4 hrs/week</span>
+              <span class="meta-pill pill-level">Postgraduate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 201, GEO 203, GEO 303. Hydrogeology fundamentals. Partial differential equations background.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Build data-driven and physics-based hybrid models for aquifer characterization</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Automate groundwater level prediction using temporal deep learning models</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Conduct parameter estimation and uncertainty analysis for MODFLOW models</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Integrate remote sensing, rainfall and borehole data for recharge estimation</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>FloPy for MODFLOW model automation and calibration</li>
+                <li>ML for hydraulic parameter estimation from pump tests</li>
+                <li>LSTM / Transformer models for groundwater level forecasting</li>
+                <li>GRACE satellite data for groundwater storage change</li>
+                <li>Surrogate modelling for contaminant transport</li>
+                <li>PEST / PEST++ for model calibration</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">FloPy</span><span class="sw-tag">PEST++</span>
+                <span class="sw-tag">PyEMU</span><span class="sw-tag">Pastas</span>
+                <span class="sw-tag">PyTorch</span><span class="sw-tag">Xarray</span>
+                <span class="sw-tag">Hydrostats</span>
+              </div>
+            </div>
+            <div class="discipline-note"><strong>Target disciplines:</strong> Hydrogeology, environmental geology, water resources, geotechnical engineering</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card" onclick="toggleCourse(this)">
+        <div class="course-header">
+          <div class="course-title-block">
+            <div class="course-code">PGS 506</div>
+            <div class="course-name">Geodynamics &amp; Tectonic Modelling with Python</div>
+            <div class="course-meta">
+              <span class="meta-pill pill-duration">10 weeks · 4 hrs/week</span>
+              <span class="meta-pill pill-level">Postgraduate</span>
+            </div>
+          </div>
+          <span class="chevron">&#8964;</span>
+        </div>
+        <div class="course-body">
+          <div class="prereq-block">
+            <div class="prereq-label">Prerequisites</div>
+            GEO 201 (numerical methods), GEO 402. Solid mechanics, continuum mechanics, or geodynamics background. Advanced calculus.
+          </div>
+          <div class="section-grid">
+            <div class="info-section">
+              <h4>Learning outcomes</h4>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Implement finite element and finite difference models for mantle convection and lithospheric flexure</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Apply ML surrogates to accelerate computationally expensive geodynamic simulations</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Infer tectonic parameters from geodetic, seismic and topographic datasets using Bayesian methods</span></div>
+              <div class="outcome-item"><div class="outcome-dot"></div><span>Couple surface process models with tectonic uplift models</span></div>
+            </div>
+            <div class="info-section">
+              <h4>Topics covered</h4>
+              <ul>
+                <li>Finite element modelling with Underworld2 / FEniCS</li>
+                <li>Plate kinematic reconstructions with PyGPlates</li>
+                <li>Thermochronology data analysis and modelling (PECUBE)</li>
+                <li>Bayesian inference for geodynamic parameter estimation</li>
+                <li>Landscape evolution modelling with Landlab / Badlands</li>
+                <li>Emulation of expensive models with Gaussian Processes</li>
+              </ul>
+            </div>
+            <div class="info-section full-width">
+              <h4>Software &amp; tools</h4>
+              <div class="software-tags">
+                <span class="sw-tag">Underworld2</span><span class="sw-tag">FEniCS</span>
+                <span class="sw-tag">PyGPlates</span><span class="sw-tag">Landlab</span>
+                <span class="sw-tag">Badlands</span><span class="sw-tag">PyMC</span>
+                <span class="sw-tag">GPy (Gaussian Processes)</span><span class="sw-tag">Citcom</span>
+              </div>
+            </div>
+            <div class="discipline-note"><strong>Target disciplines:</strong> Geodynamics, tectonics, structural geology, geomorphology, seismotectonics</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

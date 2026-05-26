@@ -1,0 +1,323 @@
+/* === Reset & Base === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f7f5;
+  --bg-tertiary: #f0efeb;
+  --text-primary: #1a1a18;
+  --text-secondary: #5a5a56;
+  --text-tertiary: #9a9a94;
+  --border-light: rgba(0,0,0,0.10);
+  --border-medium: rgba(0,0,0,0.18);
+  --accent: #1a5276;
+  --accent-light: #d6eaf8;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1e1e1c;
+    --bg-secondary: #252523;
+    --bg-tertiary: #2c2c2a;
+    --text-primary: #e8e8e2;
+    --text-secondary: #a0a09a;
+    --text-tertiary: #666662;
+    --border-light: rgba(255,255,255,0.10);
+    --border-medium: rgba(255,255,255,0.18);
+    --accent: #4a9fd4;
+    --accent-light: #0d2b3e;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* === Layout === */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* === Header === */
+.header { margin-bottom: 2rem; }
+.header h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.4px;
+}
+.header p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+/* === Year Tabs === */
+.year-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.tab {
+  padding: 7px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  outline: none;
+}
+.tab:hover { background: var(--bg-secondary); color: var(--text-primary); }
+.tab:focus-visible { box-shadow: 0 0 0 3px rgba(26,82,118,0.35); }
+.tab.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* === Year Sections === */
+.year-section { display: none; }
+.year-section.visible { display: block; }
+
+.year-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 1.25rem;
+  padding: 1.1rem 1.35rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+}
+
+.year-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+/* Year colour themes */
+.y1 .year-badge { background: #D6EAF8; color: #1A5276; }
+.y2 .year-badge { background: #D5F5E3; color: #1E8449; }
+.y3 .year-badge { background: #FAE5D3; color: #A04000; }
+.y4 .year-badge { background: #E8DAEF; color: #6C3483; }
+.yp .year-badge { background: #FDEDEC; color: #922B21; }
+
+.year-header-text h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+.year-header-text p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* === Courses === */
+.courses-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.course-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+.course-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+
+.course-header {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  user-select: none;
+}
+.course-header:hover { background: var(--bg-secondary); }
+
+.course-title-block { flex: 1; }
+
+.course-code {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.course-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.course-meta {
+  display: flex;
+  gap: 7px;
+  margin-top: 7px;
+  flex-wrap: wrap;
+}
+.meta-pill {
+  font-size: 11px;
+  padding: 2px 9px;
+  border-radius: 10px;
+  border: 1px solid;
+  font-weight: 500;
+}
+.pill-duration { background: #EAF3DE; color: #3B6D11; border-color: #97C459; }
+.pill-level    { background: #E6F1FB; color: #185FA5; border-color: #85B7EB; }
+
+@media (prefers-color-scheme: dark) {
+  .pill-duration { background: #1a3010; color: #8fd46e; border-color: #3B6D11; }
+  .pill-level    { background: #0d2236; color: #6ab4f5; border-color: #185FA5; }
+}
+
+.chevron {
+  font-size: 20px;
+  color: var(--text-tertiary);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 1px;
+  line-height: 1;
+}
+.course-card.open .chevron { transform: rotate(180deg); }
+
+/* === Course Body === */
+.course-body {
+  display: none;
+  padding: 0 1.25rem 1.35rem;
+  border-top: 1px solid var(--border-light);
+}
+.course-card.open .course-body { display: block; }
+
+.prereq-block {
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 0.65rem 0.9rem;
+  margin-top: 1rem;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.prereq-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+/* === Section Grid === */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
+  margin-top: 1rem;
+}
+@media (max-width: 600px) {
+  .section-grid { grid-template-columns: 1fr; }
+}
+.full-width { grid-column: 1 / -1; }
+
+.info-section h4 {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
+  margin-top: 0.25rem;
+}
+
+.info-section ul { list-style: none; padding: 0; }
+.info-section ul li {
+  font-size: 13px;
+  color: var(--text-primary);
+  padding: 3px 0 3px 18px;
+  position: relative;
+  line-height: 1.5;
+}
+.info-section ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text-tertiary);
+  font-size: 11px;
+  top: 5px;
+}
+
+/* === Outcomes === */
+.outcome-item {
+  display: flex;
+  gap: 9px;
+  padding: 4px 0;
+  font-size: 13px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.outcome-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* === Software Tags === */
+.software-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.sw-tag {
+  font-size: 11.5px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  font-family: 'SF Mono', 'Fira Mono', 'Consolas', monospace;
+  font-weight: 500;
+}
+
+/* === Discipline Note === */
+.discipline-note {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 9px 13px;
+  margin-top: 1rem;
+  border: 1px solid var(--border-light);
+  line-height: 1.45;
+}
+.discipline-note strong { color: var(--text-primary); }
